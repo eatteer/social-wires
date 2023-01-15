@@ -1,0 +1,34 @@
+.card-message,
+.create-comment {
+  background-color: var(--accent-color);
+  padding: 1rem;
+  border-radius: 1rem;
+  flex-grow: 1;
+}
+
+.create-comment {
+  background-color: #eaeaea;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.form input {
+  font-size: 0.8rem;
+}
+
+.form input:read-only {
+  outline: none;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+}

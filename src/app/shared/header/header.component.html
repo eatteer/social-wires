@@ -1,0 +1,39 @@
+<div class="header">
+  <div class="header-content">
+    <img class="logo" src="/assets/img/logo-yellow.png" />
+    <div class="actions">
+      <img class="icon messages" src="/assets/icon/chatbox-ellipses-1.png" />
+
+      <div class="menu-container">
+        <img (click)="toggleMenu()" class="icon" src="/assets/icon/menu.png" />
+        <div *ngIf="showMenu" class="menu">
+          <h3 class="username">{{ username }}</h3>
+          <a
+            class="menu-item"
+            (click)="toggleMenu()"
+            routerLink="/create-message"
+          >
+            <img class="icon" src="/assets/icon/create.png" />
+            <span>Create message</span></a
+          >
+          <a class="menu-item" (click)="toggleMenu()" routerLink="/my-messages">
+            <img class="icon" src="/assets/icon/send.png" />
+            <span>My messages</span>
+          </a>
+          <a
+            class="menu-item"
+            (click)="toggleMenu()"
+            routerLink="/all-messages"
+          >
+            <img class="icon" src="/assets/icon/chatbubbles-sharp.png" />
+            <span>All messages</span>
+          </a>
+          <a class="menu-item" (click)="logout()">
+            <img class="icon" src="/assets/icon/log-in-sharp.png" />
+            <span>Logout</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,37 @@
-<p>login works!</p>
+<div class="container">
+  <app-hero></app-hero>
+  <form class="form" [formGroup]="form" (ngSubmit)="submit()">
+    <button
+      type="button"
+      class="button rounded-button bg-secondary mb-4"
+      routerLink="/signup"
+    >
+      Sign up
+    </button>
+    <div class="form-group mb-4">
+      <label class="label" for="username">Username</label>
+      <input
+        class="form-control form-control-light"
+        type="text"
+        id="username"
+        formControlName="username"
+      />
+    </div>
+    <div class="form-group mb-6">
+      <label class="label" for="password">Password</label>
+      <input
+        class="form-control form-control-light"
+        type="password"
+        id="password"
+        formControlName="password"
+      />
+    </div>
+    <button
+      class="button rounded-button bg-accent"
+      type="submit"
+      [disabled]="form.invalid"
+    >
+      Sign in
+    </button>
+  </form>
+</div>

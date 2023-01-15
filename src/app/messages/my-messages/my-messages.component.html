@@ -1,0 +1,24 @@
+<div class="form">
+  <h2 class="form-title mb-4">My Messages</h2>
+  <div class="form-group">
+    <label class="label" for="date">Date select</label>
+    <input
+      [(ngModel)]="date"
+      (change)="performSearch()"
+      type="date"
+      name="date"
+      class="form-control"
+      id="date"
+    />
+  </div>
+</div>
+<div class="messages-list">
+  <app-message-card
+    class="card-message"
+    *ngFor="let message of ownMessages"
+    [title]="message.title"
+    [text]="message.text"
+    [username]="username"
+    [createdAt]="message.createdAt"
+  ></app-message-card>
+</div>
