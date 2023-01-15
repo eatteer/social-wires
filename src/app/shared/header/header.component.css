@@ -1,0 +1,68 @@
+.header {
+  background-color: var(--secondary-color);
+}
+
+.header-content {
+  max-width: 1024px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.header .logo {
+  height: 32px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon {
+  display: flex;
+  width: 24px;
+}
+
+.menu-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 300px;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--accent-color);
+}
+
+.username {
+  padding: 1rem;
+}
+
+.menu-item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: inherit;
+  text-decoration: inherit;
+  text-decoration: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: var(--primary-color);
+}
+
+.menu-item:last-child {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}

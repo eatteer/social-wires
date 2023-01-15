@@ -1,0 +1,10 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.form-title {
+  text-align: center;
+  color: var(--primary-color);
+}

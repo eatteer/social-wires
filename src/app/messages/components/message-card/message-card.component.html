@@ -1,0 +1,28 @@
+<div class="card-message">
+  <div class="mb-4">
+    <h3>{{ title }}</h3>
+    <p>{{ text }}</p>
+  </div>
+  <div class="card-bottom">
+    <small>{{ createdAt | date : "h:m a dd-MM-yy" }}</small>
+    <p class="username">{{ username }}</p>
+  </div>
+</div>
+<div *ngIf="showCreateComment" class="create-comment mt-1">
+  <form class="form" [formGroup]="form" (ngSubmit)="submit()">
+    <input
+      class="form-control form-control-light"
+      type="text"
+      formControlName="comment"
+      [placeholder]="'Comment on the publication of ' + username"
+      [readOnly]="isPreview"
+    />
+
+    <button
+      [disabled]="isPreview || form.invalid"
+      class="button rounded-button bg-accent mt-1"
+    >
+      Send
+    </button>
+  </form>
+</div>
